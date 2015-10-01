@@ -1,3 +1,20 @@
+= Modified version of Spring JMS Messaging Getting Started Guide for Remote connection
+
+This guide has been modified to connect to a remote HornetQ instance running in JBoss EAP 6.4 instead of the embedded ActiveMQ broker.
+
+== Prerequisites
+. Create a remote user in the "guest" group
+. Run JBoss with the standalone-full.xml profile
+. Disable HornetQ security (demo purposes only!)
++
+ /subsystem=messaging/hornetq-server=default:write-attribute(name=security-enabled, value=false)
+
+=== Useful links
+https://access.redhat.com/solutions/272443[How to lookup EJB3 with a Custom JNDI Name from a Remote Standalone Client in EAP6]
+https://access.redhat.com/solutions/464803[HornetQ reports "Unable to validate user: null" when a remote JMS client connects to JBoss EAP 6]
+
+
+
 ---
 tags: [messaging, jms]
 projects: [spring-framework]

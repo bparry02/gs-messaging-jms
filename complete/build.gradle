@@ -27,7 +27,11 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter")
     compile("org.springframework:spring-jms")
-    compile("org.apache.activemq:activemq-broker")
+    //compile("org.apache.activemq:activemq-broker")
+    compile("org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1")
+    compile("org.jboss:jboss-remote-naming:1.0.8.Final-redhat-1")
+    compile("org.jboss.xnio:xnio-nio:3.0.10.GA-redhat-1")
+    compile("org.hornetq:hornetq-jms-client:2.3.20.Final-redhat-1")
     testCompile("junit:junit")
 }
 
